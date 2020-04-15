@@ -9,6 +9,6 @@ namespace shipp.Models
     public string Title { get; set; }
     public string Description { get; set; }
     public int Year { get; set; }
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    // public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
   }
 }
