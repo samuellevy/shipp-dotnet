@@ -21,7 +21,7 @@ namespace shipp
     {
       if (!optionsBuilder.IsConfigured)
       {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+        //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
         optionsBuilder.UseMySql("server=localhost;user id=root;database=shipp_v1", x => x.ServerVersion("10.4.11-mariadb"));
       }
     }
