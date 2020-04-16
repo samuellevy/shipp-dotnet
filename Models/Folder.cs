@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace shipp.Models
 {
@@ -9,6 +10,6 @@ namespace shipp.Models
     public string title { get; set; }
     public string description { get; set; }
     public int year { get; set; }
-    // public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime createdAt { get; set; } = System.DateTime.UtcNow;
   }
 }
