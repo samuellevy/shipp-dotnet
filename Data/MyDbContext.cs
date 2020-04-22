@@ -34,5 +34,6 @@ namespace shipp
 
     // Entities
     public DbSet<Folder> Folders { get; set; }
+    public DbSet<Sheet> Sheets { get; set; }
   }
 }
