@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System;
+using System.Collections.Generic;
 
 namespace shipp.Models
 {
@@ -11,5 +12,7 @@ namespace shipp.Models
     public string description { get; set; }
     public int year { get; set; }
     public DateTime createdAt { get; set; } = System.DateTime.UtcNow;
+
+    public List<Sheet> sheets { get; set; }
   }
 }
