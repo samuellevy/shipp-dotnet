@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 using shipp.Models;
 
-namespace shipp
+namespace shipp.Data
 {
   public partial class MyDbContext : DbContext
   {

@@ -4,20 +4,21 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using shipp;
+using shipp.Data;
 
 namespace shipp.Migrations
 {
-    [DbContext(typeof(MyDbContext))]
-    [Migration("20200415205021_initial_migration")]
-    partial class initial_migration
+  [DbContext(typeof(MyDbContext))]
+  [Migration("20200415205021_initial_migration")]
+  partial class initial_migration
+  {
+    protected override void BuildTargetModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.3")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+      modelBuilder
+          .HasAnnotation("ProductVersion", "3.1.3")
+          .HasAnnotation("Relational:MaxIdentifierLength", 64);
 #pragma warning restore 612, 618
-        }
     }
+  }
 }

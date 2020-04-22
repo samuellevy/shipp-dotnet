@@ -13,6 +13,9 @@ using Microsoft.Extensions.Logging;
 
 using Microsoft.EntityFrameworkCore;
 
+using shipp.Data;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+
 namespace shipp
 {
   public class Startup
@@ -27,6 +30,16 @@ namespace shipp
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      // other service configurations go here
+      // replace "YourDbContext" with the class name of your DbContext
+      services.AddEntityFrameworkMySql();
+      services.AddDbContext<MyDbContext>(options => options
+          // replace with your connection string
+          .UseMySql("Server=localhost;Database=shipp_v1;User=root;Password=;", mySqlOptions => mySqlOptions
+              // replace with your Server Version and Type
+              .ServerVersion(new Version(8, 0, 18), ServerType.MySql)
+      ));
+
       services.AddControllers();
     }
 
